@@ -5,7 +5,6 @@ from clicrud.device.generic import generic
 class ClicrudWrite(Action):
 
     def run(self, **kwargs):
-        _args = kwargs
         commands = kwargs.pop('commands')
 
         # If port is not specified, ST2 passes it is as None
