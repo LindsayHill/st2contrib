@@ -1,0 +1,9 @@
+---
+name : clicrud
+description : clicrud integration for Brocade network device management
+keywords:
+  - brocade
+  - network
+version : 0.1
+author : Lindsay Hill
+email : lhill@brocade.com

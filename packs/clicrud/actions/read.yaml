@@ -1,0 +1,38 @@
+---
+name: "read"
+runner_type: "python-script"
+description: "Runs a show command on the remote Brocade device, and returns the output"
+enabled: true
+entry_point: "read.py"
+parameters:
+  host:
+    type: "string"
+    required: true
+    description: "Switch/router IP address or DNS name"
+  username:
+    type: "string"
+    required: true
+    description: "Switch username"
+  password:
+    type: "string"
+    required: true
+    description: "Switch password"
+    secret: true
+  enable:
+    type: "string"
+    description: "Enable password, if required"
+    secret: true
+  method:
+    type: "string"
+    description: "Protocol to use - SSH or Telnet. Default is SSH if not specified"
+    default: "ssh"
+    enum:
+      - "ssh"
+      - "telnet"
+  port:
+    type: "integer"
+    description: "Port for Telnet/SSH. 22/23 used if not specified" 
+  commands:
+    type: "string"
+    description: "Operational commands to run. NB NOT Configuration commands"
+    required: true
